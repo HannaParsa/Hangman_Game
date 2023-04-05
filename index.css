@@ -2,15 +2,29 @@ body{
     background-color:aquamarine;
     margin: 0;
 }
-#home{
 
+#home .button{
+    background: #afa;    
+    border-radius: 2px;
+    box-shadow: 0 0 0 5px #090;
+    display: table;
+    text-align: center;
+    font-weight: bold;
+    font-size: 25px;
+    padding: 10px 20px; /*height width*/
+    margin: 20% auto;
 }
-.button{
+.anim {
+    animation: button 3s infinite;
+    -webkit-animation: button 3s infinite;
+}
 
+#home .title{
+   text-align:center;
+   font-weight: bold;
+   font-size: 48px;
+   margin-top: 15%;
 }
-.anim{
-
-}
-.title{
-    
+.h{
+    display:none;
 }
