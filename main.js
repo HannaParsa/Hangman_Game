@@ -8,10 +8,21 @@ function gId(id){
     return document.getElementById(id)
 }
 function startGame(){
-   gId("home").className = "h"
-   gId("result").className = "h"
-   newGame()
+    gId("home").className = "h"
+    gId("result").className = "h"
+    newGame()
 }
 function newGame(){
+    clearTastatur()
+    clearPlayer()
+    createWord()
+}
+function createWord(){
 
+}
+function clearTastatur(){
+
+}
+function clearPlayer(){
+    
 }
