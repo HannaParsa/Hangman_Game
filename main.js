@@ -21,8 +21,25 @@ function createWord(){
 
 }
 function clearTastatur(){
-
+    var e = document.getElementsByClassName("b")
+    for(a = 0; a < e.length(); a ++){
+       e[a].setAttribute("data", "")
+    }
 }
 function clearPlayer(){
-    
+    fail = 0
+    wordLeft = []
+    gId("g0").setAttribute("data", "false")
+    gId("g1").setAttribute("data", "false")
+    gId("g2").setAttribute("data", "false")
+    gId("g3").setAttribute("data", "false")
+    gId("g4").setAttribute("data", "false")
+    gId("g5").setAttribute("data", "false")
+    gId("g5").setAttribute("r", "false")
+    gId("g5").setAttribute("l", "false")
+    gId("g6").setAttribute("data", "false")
+    gId("g6").setAttribute("l", "false")
+    gId("g6").setAttribute("r", "false")
+    gId("hintButton").setAttribute("data", "false")
+    gId("hint").style.display = "none"
 }

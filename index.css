@@ -28,3 +28,26 @@ body{
 .h{
     display:none;
 }
+#result .title {
+    color: #eee;
+    font-size: 48px;
+    margin-top: 15%;
+    text-align: center;
+    text-shadow: 1px 1px 0 #000;
+}
+#letter {
+    font-size: 22px;
+    height: 30px;
+    margin: 20px;
+    text-align: center;
+}
+#game .player {
+    left: 53px;
+    position: absolute;
+    top: 90px;
+    height: 130px;
+    width: 75px;
+}
+.marg {
+    border-bottom: solid 2px #ccc;
+}
