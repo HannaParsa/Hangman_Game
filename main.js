@@ -8,6 +8,7 @@ function gId(id){
     return document.getElementById(id)
 }
 function startGame(){
+    //for the begining and reload
     gId("home").className = "h"
     gId("result").className = "h"
     newGame()
