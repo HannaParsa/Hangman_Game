@@ -153,4 +153,27 @@ function typeWord(e) {
         }
     }
 }
+// Game result
+function gameEnd(e) {
+    var d = gId("result")
+    d.setAttribute("data", e)
+    if(e) {
+        gId("rT").innerText = "You Win!"
+        gId("rM").innerHTML = "Congratulations, you found the word!<br/><br/>Good Job!"
+    } else {
+        gId("rT").innerText = "You Lose!"
+        gId("rM").innerHTML = "The word was <br/><br/>\"" + word[select][0].toUpperCase() + "\"<br/><br/>Better luck next time."
+    }
+    d.className = ""
+}
 
+// Show hint
+function hint() {
+    gId("hintText").innerText = word[select][1]
+    gId("hint").style.display = "block"
+}
+
+// Exit hint
+function hintExit() {
+    gId("hint").style.display = "none"
+}
