@@ -60,5 +60,41 @@ function clearPlayer(){
     gId("hint").style.display = "none"
 }
 function createTastatur(){
-    
+    var tas = gId("keybord")
+    tas.innerHTML = ""
+    for(a = 0; a < tastatur.length; a++) {
+        var b = document.createElement("span")
+        b.className = "b"
+        b.innerText = tastatur[a]
+        b.setAttribute("data", "")
+        b.onclick = function() {
+            bTas(this)
+        }
+        tas.appendChild(b)
+    }
+}
+// Game check, If show next error / game end
+function bTas(a) {
+    if(a.getAttribute("data") == "") {
+        var x = isExist(a.innerText)
+        a.setAttribute("data", x)
+        if(x) {
+            if(wordLeft.length == 0) {
+                gameEnd(true)
+            }
+        } else {
+            showNextFail()
+        }
+    }
+}
+// If letter "X" exist
+function isExist(e) {
+    e = e.toUpperCase()
+    var x = wordLeft.indexOf(e)
+    if(x != -1) {
+        wordLeft.splice(x, 1)
+        typeWord(e)
+        return true
+    }
+    return false
 }
