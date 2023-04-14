@@ -18,7 +18,23 @@ function newGame(){
     createWord()
 }
 function createWord(){
-
+    var d = gId("letter")
+    d.innerHTML = ""
+    select = Math.floor(Math.random() * word.length)
+    for(a = 0; a < word[select][0].length; a++) {
+        var x = word[select][0][a].toUpperCase()
+        var b = document.createElement("span")
+        b.className = "l" + (x == " " ? " ls" : "")
+        b.innerHTML = "&nbsp"
+        b.id = "l" + a;
+        d.appendChild(b)
+        
+        if(x != " ") {
+            if(wordLeft.indexOf(x) == -1) {
+                wordLeft.push(x)
+            }
+        }
+    }
 }
 function clearTastatur(){
     var e = document.getElementsByClassName("b")
@@ -42,4 +58,7 @@ function clearPlayer(){
     gId("g6").setAttribute("r", "false")
     gId("hintButton").setAttribute("data", "false")
     gId("hint").style.display = "none"
+}
+function createTastatur(){
+    
 }
